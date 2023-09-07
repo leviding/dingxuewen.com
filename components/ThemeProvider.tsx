@@ -5,11 +5,7 @@ import siteMetadata from '@/data/siteMetadata';
 
 const ThemeProviders = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme={siteMetadata.theme}
-      enableSystem
-    >
+    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme} enableSystem>
       {children}
     </ThemeProvider>
   );

@@ -12,8 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: colors.sky,
-        gray: colors.slate,
+        // primary: colors.sky,
       },
     },
   },
