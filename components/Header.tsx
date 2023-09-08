@@ -1,3 +1,7 @@
+'use client';
+
+import styles from '@/styles/globals.module.scss';
+import { usePathname } from 'next/navigation';
 import siteMetadata from '@/data/siteMetadata';
 import headerNavLinks from '@/data/headerNavLinks';
 import Link from './Link';
@@ -7,29 +11,48 @@ import Image from 'next/image';
 // import SearchButton from './SearchButton';
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <header className="sticky flex items-center h-14 bg-white dark:bg-gray-900">
-      <div className="w-screen mx-auto px-4 lg:px-6 2xl:max-w-[1400px] flex items-center justify-between">
-        <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
-            <Image className="mr-3" alt="logo" src="/images/logo.png" width={28} height={28} />
-            <div className="hidden h-8 text-2xl font-semibold sm:block">
+    <header className="sticky flex items-center h-14 bg-white dark:bg-gray-800">
+      <div className="w-screen h-full mx-auto px-4 lg:px-10 2xl:px-0 2xl:max-w-[1400px] flex items-center justify-between">
+        <div className="h-full flex">
+          <Link
+            className="h-full flex items-center justify-between"
+            href="/"
+            aria-label={siteMetadata.headerTitle}
+          >
+            <Image
+              className="mr-3 w-auto h-auto"
+              alt="logo"
+              src="/images/logo.png"
+              width="28"
+              height="28"
+            />
+            <span className="hidden text-xl font-medium md:flex md:items-center">
               {siteMetadata.headerTitle}
-            </div>
-          </div>
-        </Link>
-        <div className="flex items-center leading-5 space-x-4 sm:space-x-6">
-          {headerNavLinks
-            .filter((link) => link.href !== '/')
-            .map((link) => (
+            </span>
+          </Link>
+          {headerNavLinks.map((link) => {
+            return pathname.startsWith(link.href) ? (
+              <div
+                className={`${styles.navItem} hidden md:flex items-center h-full ml-6 font-medium text-brand-normal hover:text-gray-900 cursor-pointer`}
+                key={link.title}
+              >
+                {link.title}
+              </div>
+            ) : (
               <Link
                 key={link.title}
                 href={link.href}
-                className="hidden sm:block font-medium text-gray-900 dark:text-gray-100"
+                className={`${styles.navItem} nav-item hidden md:flex items-center ml-6 font-primary hover:font-medium text-gray-900 dark:text-gray-100`}
               >
                 {link.title}
               </Link>
-            ))}
+            );
+          })}
+        </div>
+        <div className="flex items-center leading-5 space-x-4 sm:space-x-6">
           {/* <SearchButton /> */}
           <ThemeSwitch />
           {/* <MobileNav /> */}

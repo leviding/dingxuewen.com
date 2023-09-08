@@ -1,0 +1,15 @@
+.navItem {
+  position: relative;
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #1e80ff;
+      width: 100%;
+    }
+  }
+}

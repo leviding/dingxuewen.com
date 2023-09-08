@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
@@ -58,7 +58,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html
       lang={siteMetadata.language}
       className={`${inter.variable} scroll-smooth`}
-      // suppressHydrationWarning
+      suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
@@ -69,7 +69,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-gray-100 text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-gray-100 text-black antialiased dark:bg-gray-900 dark:text-white">
         <ThemeProviders>
           <GoogleAnalytics analyticsId={siteMetadata.analyticsId} />
           {/* <SearchProvider

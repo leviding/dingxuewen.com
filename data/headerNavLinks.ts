@@ -1,9 +1,12 @@
 const headerNavLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/blog', title: 'Blog' },
-  // { href: '/tags', title: 'Tags' },
-  // { href: '/projects', title: 'Projects' },
-  // { href: '/about', title: 'About' },
+  { href: '/', title: '首页' },
+  { href: '/books', title: '读书' },
+  { href: '/archives', title: '归档' },
+  { href: '/categories', title: '分类' },
+  { href: '/tags', title: '标签' },
+  { href: '/projects', title: '项目' },
+  // { href: '/pins', title: '随记' },
+  { href: '/about', title: '关于' },
 ];
 
 export default headerNavLinks;
