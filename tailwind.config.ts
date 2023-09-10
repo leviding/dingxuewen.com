@@ -17,6 +17,15 @@ const config: Config = {
         'brand-normal': '#1e80ff',
         'brand-hover': '#1171ee',
       },
+      screens: {
+        lg: '1032px',
+        'xl': '1232px',
+        '2xl': '1480px',
+      },
+      maxWidth: {
+        '5xl': '1000px',
+        '6xl': '1200px',
+      },
     },
   },
   plugins: [],

@@ -1,5 +1,13 @@
+import CommonAside from '@/components/CommonAside';
+import MainContentContainer from '@/components/MainContentContainer';
+
 const Home = () => {
-  return <main className="flex">Hello Next.js!</main>;
+  return (
+    <>
+      <MainContentContainer>main content</MainContentContainer>
+      <CommonAside />
+    </>
+  );
 };
 
 export default Home;

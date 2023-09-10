@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="sticky flex items-center h-14 bg-white dark:bg-gray-800">
-      <div className="w-screen h-full mx-auto px-4 lg:px-10 2xl:px-0 2xl:max-w-[1400px] flex items-center justify-between">
+      <div className="w-screen h-full mx-auto px-4 2xl:px-0 2xl:max-w-[1448px] flex items-center justify-between">
         <div className="h-full flex">
           <Link
             className="h-full flex items-center justify-between"
@@ -23,11 +23,11 @@ const Header = () => {
             aria-label={siteMetadata.headerTitle}
           >
             <Image
-              className="mr-3 w-auto h-auto"
+              className="mr-2 h-auto"
               alt="logo"
               src="/images/logo.png"
-              width="28"
-              height="28"
+              width={28}
+              height={28}
             />
             <span className="hidden text-xl font-medium md:flex md:items-center">
               {siteMetadata.headerTitle}

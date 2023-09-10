@@ -76,13 +76,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 searchConfig={siteMetadata.search as SearchConfig}
               > */}
           <Header />
-          <SectionContainer>
-            <div className="flex justify-between font-sans">
-              {/* LeftBar */}
-              <main>{children}</main>
-              {/* RightBar */}
-            </div>
-          </SectionContainer>
+          <SectionContainer>{children}</SectionContainer>
           {/* <Footer /> */}
           {/* </SearchProvider> */}
         </ThemeProviders>
