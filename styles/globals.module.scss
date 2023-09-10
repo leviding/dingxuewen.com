@@ -1,3 +1,10 @@
+@import './variables.scss';
+
+.header {
+  height: $h-header;
+  margin-bottom: $mb-header;
+}
+
 .navItem {
   position: relative;
 
@@ -12,4 +19,8 @@
       width: 100%;
     }
   }
+}
+
+.sectionContainer {
+  min-height: calc(100vh - $h-header - $mb-header);
 }

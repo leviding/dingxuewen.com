@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import styles from '@/styles/globals.module.scss';
 
 interface Props {
   children: ReactNode;
@@ -6,7 +7,7 @@ interface Props {
 
 const SectionContainer = ({ children }: Props) => {
   return (
-    <section className="flex justify-center mt-3 mx-auto px-4 lg:px-0 lg:max-w-5xl xl:max-w-6xl">
+    <section className={`${styles.sectionContainer} flex justify-center mx-auto px-5 lg:px-0 lg:max-w-5xl xl:max-w-6xl`}>
       {children}
     </section>
   );

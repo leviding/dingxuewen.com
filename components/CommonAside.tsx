@@ -1,9 +1,11 @@
 import AsideContainer from '@/components/AsideContainer';
+import AsideItemContainer from '@/components/AsideItemContainer';
+// import styles from '@/styles/globals.module.scss';
 
 const CommonAside = () => {
   return (
     <AsideContainer>
-      我是侧边栏
+      <AsideItemContainer>我是侧边栏</AsideItemContainer>
     </AsideContainer>
   );
 };

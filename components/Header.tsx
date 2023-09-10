@@ -1,6 +1,5 @@
 'use client';
 
-import styles from '@/styles/globals.module.scss';
 import { usePathname } from 'next/navigation';
 import siteMetadata from '@/data/siteMetadata';
 import headerNavLinks from '@/data/headerNavLinks';
@@ -9,13 +8,14 @@ import Link from './Link';
 import ThemeSwitch from './ThemeSwitch';
 import Image from 'next/image';
 // import SearchButton from './SearchButton';
+import styles from '@/styles/globals.module.scss';
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky flex items-center h-14 bg-white dark:bg-gray-800">
-      <div className="w-screen h-full mx-auto px-4 2xl:px-0 2xl:max-w-[1448px] flex items-center justify-between">
+    <header className={`${styles.header} sticky flex items-center bg-white dark:bg-gray-800`}>
+      <div className="w-screen h-full mx-auto px-5 2xl:px-0 2xl:max-w-[1448px] flex items-center justify-between">
         <div className="h-full flex">
           <Link
             className="h-full flex items-center justify-between"
@@ -36,7 +36,7 @@ const Header = () => {
           {headerNavLinks.map((link) => {
             return pathname.startsWith(link.href) ? (
               <div
-                className={`${styles.navItem} hidden md:flex items-center h-full ml-6 font-medium text-brand-normal hover:text-gray-900 cursor-pointer`}
+                className={`${styles.navItem} hidden md:flex items-center h-full ml-6 font-medium text-brand-normal hover:text-gray-900 dark:hover:text-white cursor-pointer`}
                 key={link.title}
               >
                 {link.title}

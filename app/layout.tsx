@@ -1,4 +1,3 @@
-import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
@@ -6,6 +5,7 @@ import SectionContainer from '@/components/SectionContainer';
 import ThemeProviders from '@/components/ThemeProvider';
 import Header from '@/components/Header';
 import siteMetadata from '@/data/siteMetadata';
+import '@/styles/globals.css';
 
 const inter = Inter({
   subsets: ['latin'],

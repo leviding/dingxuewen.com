@@ -3,7 +3,7 @@ import { ThemeEnum } from '@/constants/common';
 const siteMetadata = {
   title: "Levi's Blog",
   author: 'Levi Ding',
-  headerTitle: "则以学文",
+  headerTitle: "丁学文的网站",
   description:
     'Levi Ding 的博客，分享 Web 开发、数据分析、机器学习及其他主题内容。',
   language: 'zh-CN',
