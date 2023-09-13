@@ -5,7 +5,7 @@ import AsideItemContainer from '@/components/AsideItemContainer';
 const CommonAside = () => {
   return (
     <AsideContainer>
-      <AsideItemContainer>我是侧边栏</AsideItemContainer>
+      <AsideItemContainer>侧边栏开发中</AsideItemContainer>
     </AsideContainer>
   );
 };

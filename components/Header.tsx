@@ -34,7 +34,7 @@ const Header = () => {
             </span>
           </Link>
           {headerNavLinks.map((link) => {
-            return pathname.startsWith(link.href) ? (
+            return pathname === link.href ? (
               <div
                 className={`${styles.navItem} hidden md:flex items-center h-full ml-6 font-medium text-brand-normal hover:text-gray-900 dark:hover:text-white cursor-pointer`}
                 key={link.title}

@@ -38,9 +38,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -77,7 +79,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               > */}
           <Header />
           <SectionContainer>{children}</SectionContainer>
-          {/* <Footer /> */}
           {/* </SearchProvider> */}
         </ThemeProviders>
       </body>
