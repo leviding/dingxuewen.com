@@ -1,6 +1,7 @@
 const path = require('path');
+const { withContentlayer } = require('next-contentlayer');
 
-module.exports = {
+module.exports = withContentlayer({
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
@@ -12,4 +13,4 @@ module.exports = {
     });
     return config;
   },
-};
+});
