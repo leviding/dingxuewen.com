@@ -18,7 +18,7 @@ const Home = () => {
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
           const { title, date, summary, tags, slug } = post;
-          return <div key={slug}>{ title }</div>;
+          return <div key={slug}>{title}</div>;
         })}
       </MainContentContainer>
       <CommonAside />

@@ -6,7 +6,7 @@ interface Props {
 
 const AsideContainer = ({ children }: Props) => {
   return (
-    <aside className="w-[260px] h-fit hidden lg:block ml-5">
+    <aside className="w-[260px] h-fit hidden lg:block ml-5 flex-none">
       {children}
     </aside>
   );

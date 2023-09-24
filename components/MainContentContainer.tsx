@@ -5,7 +5,11 @@ interface Props {
 }
 
 const MainContentContainer = ({ children }: Props) => {
-  return <main className="w-full lg:w-[720px] bg-white dark:bg-gray-800 p-5 rounded">{children}</main>;
+  return (
+    <main className="flex-auto bg-white dark:bg-gray-800 p-5 rounded">
+      {children}
+    </main>
+  );
 };
 
 export default MainContentContainer;
