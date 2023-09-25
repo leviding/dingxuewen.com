@@ -5,7 +5,7 @@ interface Props {
 }
 
 const AsideItemContainer = ({ children }: Props) => {
-  return <div className="bg-white dark:bg-gray-800 p-5 mb-5 rounded">{children}</div>;
+  return <div className="bg-white dark:bg-neutral-900 p-5 mb-5 rounded">{children}</div>;
 };
 
 export default AsideItemContainer;

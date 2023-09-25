@@ -72,7 +72,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <body className="bg-gray-100 text-black antialiased dark:bg-gray-900 dark:text-white">
+      <body className="bg-gray-100 text-black antialiased dark:bg-neutral-950 dark:text-white">
         <ThemeProviders>
           <GoogleAnalytics analyticsId={siteMetadata.analyticsId} />
           {/* <SearchProvider

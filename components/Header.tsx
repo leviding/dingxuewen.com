@@ -14,7 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className={`${styles.header} sticky flex items-center bg-white dark:bg-gray-800`}>
+    <header className={`${styles.header} sticky flex items-center bg-white dark:bg-neutral-900`}>
       <div className="w-screen h-full mx-auto px-5 2xl:px-0 2xl:max-w-[1448px] flex items-center justify-between">
         <div className="h-full flex">
           <Link
