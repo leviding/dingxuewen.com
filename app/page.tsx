@@ -1,5 +1,5 @@
-// import Link from '@/components/Link';
-// import Tag from '@/components/Tag';
+import Link from '@/components/Link';
+import Tag from '@/components/Tag';
 // import siteMetadata from '@/data/siteMetadata';
 import { sortPosts, allCoreContent } from '@/utils/contentlayer';
 import { allPosts } from 'contentlayer/generated';
@@ -18,7 +18,27 @@ const Home = () => {
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
           const { title, date, summary, tags, slug } = post;
-          return <div key={slug}>{title}</div>;
+          return (
+            <>
+              <div className="px-5 py-4 hover:bg-gray-50" key={slug}>
+                <h2 className="text-xl font-bold">
+                  <Link
+                    href={`/post/${slug}`}
+                    className="text-gray-900 dark:text-gray-100 hover:underline decoration-1"
+                  >
+                    {title}
+                  </Link>
+                </h2>
+                <div className="flex flex-wrap">
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={tag} />
+                  ))}
+                </div>
+                <div className=" text-gray-500 dark:text-gray-400">{summary}</div>
+              </div>
+              <hr className="divide-y border-gray-100 mx-5 dark:border-gray-800" />
+            </>
+          );
         })}
       </MainContentContainer>
       <CommonAside />

@@ -6,7 +6,7 @@ interface Props {
 
 const MainContentContainer = ({ children }: Props) => {
   return (
-    <main className="flex-auto bg-white dark:bg-neutral-900 p-5 rounded lg:max-w-[820px]">
+    <main className="flex-auto bg-white dark:bg-neutral-900 rounded lg:max-w-[820px]">
       {children}
     </main>
   );

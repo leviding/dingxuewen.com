@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-// const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 const config: Config = {
   content: [
@@ -13,6 +13,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: colors.sky,
         'brand-normal': '#1e80ff',
         'brand-hover': '#1171ee',
       },
@@ -23,4 +24,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

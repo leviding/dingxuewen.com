@@ -25,9 +25,9 @@ const Header = () => {
             <Image
               className="mr-2 h-auto"
               alt="logo"
-              src="/images/logo.png"
-              width={28}
-              height={28}
+              src={siteMetadata.siteLogo}
+              width={36}
+              height={36}
             />
             <span className="hidden text-xl font-medium md:flex md:items-center">
               {siteMetadata.headerTitle}
