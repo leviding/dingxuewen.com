@@ -1,20 +1,20 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode
-  background?: boolean
+  children: ReactNode;
+  noPadding?: boolean;
 }
 
-const MainContentContainer = ({ children, background = true }: Props) => {
+const MainContentContainer = ({ children, noPadding }: Props) => {
   return (
     <main
       className={`${
-        background ? 'bg-white dark:bg-neutral-900 rounded' : 'lg:max-w-[820px]'
-      } flex-auto`}
+        noPadding ? '' : 'p-5'
+      } bg-white dark:bg-neutral-900 rounded lg:max-w-[820px] flex-auto h-fit mb-5`}
     >
       {children}
     </main>
-  )
-}
+  );
+};
 
-export default MainContentContainer
+export default MainContentContainer;

@@ -1,5 +1,4 @@
-import AsideContainer from '@/components/AsideContainer';
-import AsideItemContainer from '@/components/AsideItemContainer';
+import { AsideContainer, AsideItemContainer } from '@/components';
 // import styles from '@/styles/globals.module.scss';
 
 const CommonAside = () => {

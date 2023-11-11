@@ -14,7 +14,7 @@ export const Post = defineDocumentType(() => ({
     lastModify: { type: 'date' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
-    image: { type: 'string' },
+    image: { type: 'string', required: true },
     // authors: { type: 'list', of: { type: 'string' } },
     // layout: { type: 'string' },
     // bibliography: { type: 'string' },

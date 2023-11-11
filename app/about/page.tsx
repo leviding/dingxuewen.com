@@ -1,5 +1,4 @@
-import CommonAside from '@/components/CommonAside';
-import MainContentContainer from '@/components/MainContentContainer';
+import { CommonAside, MainContentContainer } from '@/components';
 
 const About = () => {
   return (

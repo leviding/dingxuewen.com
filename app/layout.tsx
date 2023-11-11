@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
-import SectionContainer from '@/components/SectionContainer';
-import ThemeProviders from '@/components/ThemeProvider';
-import Header from '@/components/Header';
+import { GoogleAnalytics, Header, SectionContainer, ThemeProvider } from '@/components';
 import siteMetadata from '@/data/siteMetadata';
 import '@/styles/globals.css';
 
@@ -73,7 +70,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <body className="bg-gray-100 text-black antialiased dark:bg-neutral-950 dark:text-white">
-        <ThemeProviders>
+        <ThemeProvider>
           <GoogleAnalytics analyticsId={siteMetadata.analyticsId} />
           {/* <SearchProvider
                 searchConfig={siteMetadata.search as SearchConfig}
@@ -81,7 +78,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Header />
           <SectionContainer>{children}</SectionContainer>
           {/* </SearchProvider> */}
-        </ThemeProviders>
+        </ThemeProvider>
       </body>
     </html>
   );
