@@ -15,7 +15,7 @@ const Date = ({ label, date, noIcon = false, className }: Props) => {
       } flex items-center whitespace-nowrap text-sm mb-1 text-gray-600 dark:text-gray-300`}
     >
       {!noIcon && <Icon icon="calendar" iconDark="calendar-lighter" />}
-      <div className="text-gray-800">{label || ''}</div>
+      {label && <div className="text-gray-800 dark:text-gray-200">{label || ''}</div>}
       {date.slice(0, date.indexOf('T'))}
     </div>
   );
