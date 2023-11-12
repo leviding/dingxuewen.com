@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { CommonAside, Icon, Link, MainContentContainer, Tag } from '@/components';
+import { CommonAside, Date, Link, MainContentContainer, Tag } from '@/components';
 // import siteMetadata from '@/data/siteMetadata';
 import { sortPosts, allCoreContent } from '@/utils/contentlayer';
 import { allPosts } from 'contentlayer/generated';
@@ -28,14 +28,11 @@ const Home = () => {
               >
                 <div>
                   <Link href={`/post/${slug}`}>
-                    <h2 className="text-lg font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-100 mb-1">
+                    <h2 className="text-xl font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-100 mb-1">
                       {title}
                     </h2>
                   </Link>
-                  <div className="flex items-center whitespace-nowrap text-sm mb-1 text-gray-600 dark:text-gray-300">
-                    <Icon icon="calendar" iconDark="calendar-lighter" />
-                    {date.slice(0, date.indexOf('T'))}
-                  </div>
+                  <Date date={date} />
                   {/* {lastModify && (
                       <div className="whitespace-nowrap">
                         {lastModify.slice(0, lastModify.indexOf('T'))}
@@ -51,7 +48,7 @@ const Home = () => {
                   </div>
                 </div>
                 <Image
-                  className="rounded ml-3 object-cover max-h-[130px]"
+                  className="hidden sm:block rounded ml-3 object-cover max-h-[130px]"
                   src={image}
                   alt="封面图"
                   width={180}

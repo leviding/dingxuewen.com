@@ -12,3 +12,4 @@ export { default as SectionContainer } from './SectionContainer';
 export { default as Tag } from './Tag';
 export { default as ThemeProvider } from './ThemeProvider';
 export { default as ThemeSwitch } from './ThemeSwitch';
+export { default as Date } from './Date';
