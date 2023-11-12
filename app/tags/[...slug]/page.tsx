@@ -1,12 +1,12 @@
 import { CommonAside, MainContentContainer } from '@/components';
 
-const Posts = () => {
+const Tags = () => {
   return (
     <>
-      <MainContentContainer>详情页开发中...</MainContentContainer>
+      <MainContentContainer>标签页开发中...</MainContentContainer>
       <CommonAside />
     </>
   );
 };
 
-export default Posts;
+export default Tags;
