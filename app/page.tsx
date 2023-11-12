@@ -24,7 +24,7 @@ const Home = () => {
             <div key={slug}>
               <div
                 onClick={() => router.push(`/post/${slug}`)}
-                className="flex justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-neutral-800 cursor-pointer"
+                className="flex justify-between p-3 pt-2 sm:px-5 sm:py-4 hover:bg-gray-50 dark:hover:bg-neutral-800 cursor-pointer"
               >
                 <div>
                   <Link href={`/post/${slug}`}>

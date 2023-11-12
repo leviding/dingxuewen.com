@@ -8,7 +8,7 @@ interface Props {
 const SectionContainer = ({ children }: Props) => {
   return (
     <section
-      className={`${styles.sectionContainer} flex justify-center mx-auto px-5 xl:max-w-7xl`}
+      className={`${styles.sectionContainer} flex justify-center mx-auto px-3 sm:px-5 xl:max-w-7xl`}
     >
       {children}
     </section>

@@ -28,3 +28,13 @@
 .footer {
   padding: 32px;
 }
+
+@media only screen and (max-width: 640px) {
+  .header {
+    margin-bottom: $mb-header-sm;
+  }
+
+  .sectionContainer {
+    min-height: calc(100vh - $h-header - $mb-header-sm);
+  }
+}
