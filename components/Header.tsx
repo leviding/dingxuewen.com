@@ -45,7 +45,7 @@ const Header = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`${styles.navItem} nav-item hidden md:flex items-center ml-6 font-primary hover:font-medium text-gray-900 dark:text-gray-100`}
+                className={`${styles.navItem} nav-item hidden md:flex items-center ml-6 hover:font-medium text-gray-900 dark:text-gray-100`}
               >
                 {link.title}
               </Link>

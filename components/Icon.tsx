@@ -1,12 +1,29 @@
-import Image from 'next/image';
+'use client';
 
-interface Props {
+import { useTheme } from 'next-themes';
+import { ThemeEnum } from '@/constants/common';
+import Image, { ImageProps } from 'next/image';
+
+type Props = Omit<ImageProps, 'src' | 'alt'> & {
   icon: string;
-  size: number;
-}
+  iconDark: string;
+  size?: number;
+};
 
-const Icon = ({ icon, size = 16 }: Props) => {
-  return <Image src={`/icons/${icon}.svg`} alt="icon" width={size} height={size} />;
+const Icon = ({ icon, iconDark, size = 14, ...rest }: Props) => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === ThemeEnum.DARK;
+
+  return (
+    <Image
+      {...rest}
+      className="mr-1"
+      src={`/icons/${isDarkTheme ? iconDark : icon}.svg`}
+      alt="icon"
+      width={size}
+      height={size}
+    />
+  );
 };
 
 export default Icon;

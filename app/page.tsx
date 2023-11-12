@@ -17,21 +17,16 @@ const Home = () => {
         {posts.slice(0, MAX_DISPLAY).map((post) => {
           const { title, date, lastModify, summary, tags, slug, image } = post;
           return (
-            <>
-              <div
-                className="flex justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-neutral-800 cursor-pointer"
-                key={slug}
-              >
+            <div key={slug}>
+              <div className="flex justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-neutral-800 cursor-pointer">
                 <div>
-                  <h2 className="text-lg font-bold">
-                    <Link
-                      href={`/post/${slug}`}
-                      className="line-clamp-1 break-all text-gray-900 dark:text-gray-100"
-                    >
+                  <Link href={`/post/${slug}`}>
+                    <h2 className="text-lg font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-100 mb-1">
                       {title}
-                    </Link>
-                  </h2>
-                  <div className="whitespace-nowrap text-sm">
+                    </h2>
+                  </Link>
+                  <div className="flex items-center whitespace-nowrap text-sm mb-1 text-gray-600 dark:text-gray-300">
+                    <Icon icon="calendar" iconDark="calendar-lighter" />
                     {date.slice(0, date.indexOf('T'))}
                   </div>
                   {/* {lastModify && (
@@ -39,7 +34,7 @@ const Home = () => {
                         {lastModify.slice(0, lastModify.indexOf('T'))}
                       </div>
                     )} */}
-                  <div className=" text-gray-500 dark:text-gray-400 line-clamp-2 break-all">
+                  <div className="text-gray-500 dark:text-gray-300 line-clamp-2 break-all">
                     {summary}
                   </div>
                   <div className="flex flex-wrap">
@@ -49,7 +44,7 @@ const Home = () => {
                   </div>
                 </div>
                 <Image
-                  className="rounded ml-3 object-cover"
+                  className="rounded ml-3 object-cover max-h-[130px]"
                   src={image}
                   alt="封面图"
                   width={180}
@@ -57,7 +52,7 @@ const Home = () => {
                 />
               </div>
               <hr className="divide-y border-gray-100 mx-5 dark:border-gray-800" />
-            </>
+            </div>
           );
         })}
       </MainContentContainer>

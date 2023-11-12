@@ -8,7 +8,7 @@ const Tag = ({ text }: Props) => {
   return (
     <Link
       href={`/tags/${slug(text)}`}
-      className="mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+      className="px-[6px] mt-[6px] mr-2 rounded text-sm bg-gray-100 dark:bg-neutral-700 text-gray-500 dark:text-gray-300  hover:text-brand-hover dark:hover:text-gray-400"
     >
       {text.split(' ').join('-')}
     </Link>
