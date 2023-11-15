@@ -13,3 +13,6 @@ export { default as Tag } from './Tag';
 export { default as ThemeProvider } from './ThemeProvider';
 export { default as ThemeSwitch } from './ThemeSwitch';
 export { default as Date } from './Date';
+export { default as Pre } from './Pre';
+export { default as mdxComponents } from './mdxComponents';
+export { default as MDXContent } from './MDXContent';

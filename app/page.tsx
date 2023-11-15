@@ -28,7 +28,7 @@ const Home = () => {
               >
                 <div>
                   <Link href={`/post/${slug}`}>
-                    <h2 className="text-xl font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-100 mb-1">
+                    <h2 className="text-xl font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-200 mb-1">
                       {title}
                     </h2>
                   </Link>
