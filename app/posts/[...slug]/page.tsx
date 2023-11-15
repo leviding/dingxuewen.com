@@ -4,7 +4,7 @@ import { allPosts } from 'contentlayer/generated';
 const Posts = ({ params }: { params: { slug: string[] } }) => {
   const slug = decodeURI(params.slug.join('/'));
   const post = allPosts.find((v) => v.slug === slug);
-  const { title, date = '', lastModify = '', summary, tags, image, body } = post || {};
+  const { title, date = '', lastModify = '', summary, tags, cover, body } = post || {};
 
   return (
     <>

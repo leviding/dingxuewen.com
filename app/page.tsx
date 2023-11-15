@@ -19,15 +19,15 @@ const Home = () => {
       <MainContentContainer noPadding>
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
-          const { title, date, lastModify, summary, tags, slug, image } = post;
+          const { title, date, lastModify, summary, tags, slug, cover } = post;
           return (
             <div key={slug}>
               <div
-                onClick={() => router.push(`/post/${slug}`)}
+                onClick={() => router.push(`/posts/${slug}`)}
                 className="flex justify-between p-3 pt-2 sm:px-5 sm:py-4 hover:bg-gray-50 dark:hover:bg-neutral-800 cursor-pointer"
               >
                 <div>
-                  <Link href={`/post/${slug}`}>
+                  <Link href={`/posts/${slug}`}>
                     <h2 className="text-xl font-bold line-clamp-1 break-all text-gray-900 dark:text-gray-200 mb-1">
                       {title}
                     </h2>
@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
                 <Image
                   className="hidden sm:block rounded ml-3 object-cover max-h-[130px]"
-                  src={image}
+                  src={cover}
                   alt="封面图"
                   width={180}
                   height={74}
