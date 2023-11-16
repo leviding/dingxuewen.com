@@ -6,7 +6,7 @@ import type { MDXComponents } from 'mdx/types';
 // import CustomLink from './Link'
 // import Bleed from 'pliny/ui/Bleed'
 
-const mdxComponents: MDXComponents = {
+const MDXContentComponents: MDXComponents = {
   // Image,
   // TOCInline,
   // a: CustomLink,
@@ -15,4 +15,4 @@ const mdxComponents: MDXComponents = {
   // BlogNewsletterForm,
 };
 
-export default mdxComponents;
+export default MDXContentComponents;

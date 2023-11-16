@@ -1,6 +1,12 @@
 import 'styles/prism.css';
 
-import { CommonAside, Date, MainContentContainer, MDXContent, mdxComponents } from '@/components';
+import {
+  CommonAside,
+  Date,
+  MainContentContainer,
+  MDXContent,
+  MDXContentComponents,
+} from '@/components';
 import { allPosts } from 'contentlayer/generated';
 
 const Posts = ({ params }: { params: { slug: string[] } }) => {
@@ -16,7 +22,7 @@ const Posts = ({ params }: { params: { slug: string[] } }) => {
           <Date label="发表时间：" date={date} className="mr-4" noIcon />
           <Date label="最近更新：" date={lastModify} noIcon />
         </div>
-        <MDXContent code={body?.code || ''} components={mdxComponents} />
+        <MDXContent code={body?.code || ''} components={MDXContentComponents} />
         {/* <MDXContent code={body?.code || ''} components={components} toc={post.toc} /> */}
       </MainContentContainer>
       <CommonAside />
