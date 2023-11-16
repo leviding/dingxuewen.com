@@ -10,7 +10,7 @@ const MainContentContainer = ({ children, noPadding }: Props) => {
     <main
       className={`${
         noPadding ? '' : 'p-5'
-      } bg-white dark:bg-neutral-900 rounded lg:max-w-[820px] flex-auto h-fit mb-3 sm:mb-5`}
+      } w-full bg-white dark:bg-neutral-900 rounded flex-auto h-fit mb-3 sm:mb-5 lg:max-w-main`}
     >
       {children}
     </main>

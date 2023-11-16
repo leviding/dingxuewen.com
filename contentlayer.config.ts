@@ -58,15 +58,22 @@ export default makeSource({
     remarkPlugins: [remarkGfm, [remarkFootnotes, { inlineNotes: true }], remarkMath],
     rehypePlugins: [
       rehypeSlug,
-      rehypeAutolinkHeadings,
+      rehypeCodeTitles,
+      // @ts-ignore
+      [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true, showLineNumbers: true }],
+      [
+        rehypeAutolinkHeadings,
+        {
+          properties: {
+            className: ['anchor'],
+          },
+        },
+      ],
       // @ts-ignore
       rehypeKatex,
       [rehypeCitation, { path: path.join(root, 'data'), linkCitations: true }],
       // @ts-ignore
-      [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
-      // @ts-ignore
       rehypePresetMinify,
-      rehypeCodeTitles,
     ],
   },
 });

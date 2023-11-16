@@ -2,7 +2,7 @@
 
 import { useState, useRef, ReactNode, LegacyRef } from 'react';
 
-const Pre = ({ children }: { children?: ReactNode }) => {
+const Pre = ({ children, ...rest }: { children?: ReactNode }) => {
   const textInput: LegacyRef<HTMLDivElement> = useRef(null);
   const [hovered, setHovered] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -67,7 +67,7 @@ const Pre = ({ children }: { children?: ReactNode }) => {
         </button>
       )}
 
-      <pre>{children}</pre>
+      <pre {...rest}>{children}</pre>
     </div>
   );
 };

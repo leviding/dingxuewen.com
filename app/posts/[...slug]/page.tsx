@@ -1,3 +1,5 @@
+import 'styles/prism.css';
+
 import { CommonAside, Date, MainContentContainer, MDXContent, mdxComponents } from '@/components';
 import { allPosts } from 'contentlayer/generated';
 
