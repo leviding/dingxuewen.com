@@ -7,6 +7,7 @@ import remarkFootnotes from 'remark-footnotes';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeKatex from 'rehype-katex';
+// @ts-ignore
 import rehypeCitation from 'rehype-citation';
 import rehypePrismPlus from 'rehype-prism-plus';
 import rehypePresetMinify from 'rehype-preset-minify';
