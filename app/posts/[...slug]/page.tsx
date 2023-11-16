@@ -2,6 +2,7 @@ import 'styles/prism.css';
 
 import {
   CommonAside,
+  CommonToolbar,
   Date,
   MainContentContainer,
   MDXContent,
@@ -16,6 +17,7 @@ const Posts = ({ params }: { params: { slug: string[] } }) => {
 
   return (
     <>
+      <CommonToolbar />
       <MainContentContainer>
         <h1 className="text-3xl font-medium mb-4">{title}</h1>
         <div className="flex flex-wrap mb-3">
