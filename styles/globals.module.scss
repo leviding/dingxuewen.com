@@ -38,3 +38,9 @@
     min-height: calc(100vh - $h-header - $mb-header-sm);
   }
 }
+
+.commonToolbar {
+  @media only screen and (min-width: 1218px) {
+    display: flex;
+  }
+}

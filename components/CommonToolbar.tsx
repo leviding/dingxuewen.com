@@ -12,15 +12,9 @@ const ToolbarItem = ({ alt = '', iconPath = '' }) => {
       <div
         onMouseEnter={() => setSrc(iconPath + '-active')}
         onMouseLeave={() => setSrc(iconPath)}
-        className={`${styles.toolbarItem} w-9 h-9 bg-white rounded-full flex justify-center items-center mb-4 cursor-pointer hover:text-[#515767]`}
+        className="w-9 h-9 bg-white rounded-full flex justify-center items-center mb-4 cursor-pointer hover:text-[#515767]"
       >
-        <Image
-          className={styles.toolbarItemImage}
-          alt={alt}
-          src={src + '.svg'}
-          width={20}
-          height={20}
-        />
+        <Image alt={alt} src={src + '.svg'} width={20} height={20} />
       </div>
     )
   );
@@ -28,7 +22,7 @@ const ToolbarItem = ({ alt = '', iconPath = '' }) => {
 
 const CommonToolbar = () => {
   return (
-    <div className="w-9 mr-11 hidden xl:flex flex-col pt-16">
+    <div className={`${styles.commonToolbar} w-9 mr-6 hidden flex-col pt-16`}>
       <ToolbarItem alt="评论" iconPath="/icons/comment" />
       <ToolbarItem alt="微信" iconPath="/icons/wechat" />
       <ToolbarItem alt="微博" iconPath="/icons/weibo" />
