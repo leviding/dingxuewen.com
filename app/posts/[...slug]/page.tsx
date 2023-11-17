@@ -1,4 +1,4 @@
-import 'styles/prism.css';
+import 'styles/main.css';
 
 import {
   CommonAside,

@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-      <MainContentContainer noPadding>
+      <MainContentContainer noPadding disableProse>
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map((post) => {
           const { title, date, lastModify, summary, tags, slug, cover } = post;

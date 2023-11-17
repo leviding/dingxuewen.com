@@ -3,13 +3,14 @@ import { Pre } from '@/components';
 // import BlogNewsletterForm from 'pliny/ui/BlogNewsletterForm'
 import type { MDXComponents } from 'mdx/types';
 // import Image from './Image'
-// import CustomLink from './Link'
+import CustomLink from './Link';
 // import Bleed from 'pliny/ui/Bleed'
 
 const MDXContentComponents: MDXComponents = {
   // Image,
   // TOCInline,
-  // a: CustomLink,
+  // @ts-ignore
+  a: CustomLink,
   pre: Pre,
   // Bleed,
   // BlogNewsletterForm,
