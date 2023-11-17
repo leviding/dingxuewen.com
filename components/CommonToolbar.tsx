@@ -12,7 +12,7 @@ const ToolbarItem = ({ alt = '', iconPath = '' }) => {
       <div
         onMouseEnter={() => setSrc(iconPath + '-active')}
         onMouseLeave={() => setSrc(iconPath)}
-        className="w-9 h-9 bg-white rounded-full flex justify-center items-center mb-4 cursor-pointer hover:text-[#515767]"
+        className="w-9 h-9 bg-white rounded-full flex justify-center items-center mb-4 cursor-pointer"
       >
         <Image alt={alt} src={src + '.svg'} width={20} height={20} />
       </div>
